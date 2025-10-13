@@ -24,13 +24,13 @@ async function getAIResponse(userMessage) {
 プレイヤーの行動に対して、状況描写・NPCの反応・判定結果を返してください。
 `;
 
-  const response = await openai.chat.completions.create({
-    model: 'gpt-4',
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: userMessage },
-    ],
-  });
+const response = await openai.chat.completions.create({
+  model: 'gpt-3.5-turbo', // ← ここがポイント！
+  messages: [
+    { role: 'system', content: systemPrompt },
+    { role: 'user', content: userMessage },
+  ],
+});
 
   return response.choices[0].message.content;
 }
