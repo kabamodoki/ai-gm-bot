@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "discord.js": "^14.23.0",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "openai": "^6.3.0"
   }
 }
